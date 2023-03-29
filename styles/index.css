@@ -39,7 +39,7 @@ h1 {
 }
 
 .faq-title {
-  margin: 0 35px 0 0;
+  margin: 0 0 0 0;
 }
 
 .faq-text {
@@ -74,7 +74,7 @@ h1 {
   padding-top: 3px;
   position: absolute;
   top: 6px;
-  right: 42px;
+  right: 10px;
   height: 30px;
   width: 30px;
   transition: 0.3s ease;
