@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body class="bg-success-subtle ">
+    <div class="card w-50 d-block m-auto mt-3">
+        <div class="card-body bg-success rounded">
+            <p class="text-light" style="font-weight: bold;">Nhập số</p>
+            <div class="d-flex mt-3">
+                <input class="form-control me-2" id="mang"/>
+                <button class="btn btn-light text-success" style="font-weight: bold;" id="btnThemMang">Thêm</button>
+            </div>
+           
+            <div class="d-flex mt-3">
+                <p  class="text-light" style="font-weight: bold;">Mảng:</p>
+                <div class="alert alert-success ms-3 w-100" id="arrNumber"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title " style="font-weight: bold;">1. Tổng các số dương trong mảng.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="tongSoDuong"></div>
+            </div>
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnTinhTong">Tính tổng</button>
+            </div>
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">2. Đếm có bao nhiêu số dương trong mảng.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soDuong"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnDem">Đếm</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">3. Tìm số nhỏ nhất trong mảng.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soNhoNhat"></div>
+            </div>
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnTimSoNho">Tìm</button>
+            </div> 
+        </div>
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">4. Tìm số dương nhỏ nhất trong mảng.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soDuongNhoNhat"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnTimSoDuongNho">Tìm</button>
+            </div> 
+        </div>
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">5. Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soChan"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnTimSoChan">Tìm</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị).</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex">
+                <div class="w-50 mx-2">
+                    <input class="form-control" id="viTri-1" placeholder="Nhập số vị trí 1"/>
+                </div>
+                <div class="w-50 mx-2">
+                    <input class="form-control" id="viTri-2" placeholder="Nhập số vị trí 2"/>
+                </div>
+            </div>
+            
+            <div class="d-flex mt-3 mx-2">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="kq-bai6"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnDoiCho">Đổi chỗ</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">7. Sắp xếp mảng theo thứ tự tăng dần.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="mangDaSapXep"></div>
+            </div>
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btnSapXep">Sắp xếp</button>
+            </div> 
+        </div>
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 20%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soNTDauTien"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-50" id="btnTimSoNT">Tìm số nguyên tố</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto mt-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <input class="form-control me-2" id="soThuc" placeholder="Nhập số"/>
+                <button class="btn btn-success w-25" id="btnThemSoThuc">Thêm số</button>
+            </div>
+            <div class="d-flex mt-3">
+                <p style="width: 25%; font-weight: bold;">Mảng mới:</p>
+                <div class="alert alert-success w-100" id="newArrNumber"></div>
+            </div>
+            
+            <div class="d-flex mt-3">
+                <p style="width: 22%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soNguyen"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-50" id="btnDemSoNguyen">Đếm số nguyên</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    <div class="card w-50 d-block m-auto my-3 faq">
+        <div class="card-header bg-success text-light faq-title" style="font-weight: bold;">10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.</div>
+        <div class="card-body faq-text" style="width: 90%;">
+            <div class="d-flex mt-3">
+                <p style="width: 15%; font-weight: bold;">Kết quả:</p>
+                <div class="alert alert-success ms-3 w-100" id="soNguyenAmDuong"></div>
+            </div>
+
+            <div class="card-footer text-center bg-light border-0">
+                <button class="btn btn-success w-25" id="btndemSoNguyenAmDuong">So Sánh</button>
+            </div> 
+        </div>
+
+        <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./js/collapse.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
